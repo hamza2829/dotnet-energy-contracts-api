@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0A9C865F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyContracts.UnitTests", "tests\EnergyContracts.UnitTests\EnergyContracts.UnitTests.csproj", "{19A7E867-8752-411F-8B2A-1C92D17536DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyContracts.IntegrationTests", "tests\EnergyContracts.IntegrationTests\EnergyContracts.IntegrationTests.csproj", "{0F41264E-BDFB-401F-81DD-A46BE2EF9676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{19A7E867-8752-411F-8B2A-1C92D17536DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19A7E867-8752-411F-8B2A-1C92D17536DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19A7E867-8752-411F-8B2A-1C92D17536DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F41264E-BDFB-401F-81DD-A46BE2EF9676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F41264E-BDFB-401F-81DD-A46BE2EF9676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F41264E-BDFB-401F-81DD-A46BE2EF9676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F41264E-BDFB-401F-81DD-A46BE2EF9676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8F22031B-7856-47C7-9947-7F5B2C29D973} = {639700C6-0C10-4541-8AE5-4FE31861EBA0}
 		{19A7E867-8752-411F-8B2A-1C92D17536DB} = {0A9C865F-0081-4753-B611-F448E04B4C5A}
+		{0F41264E-BDFB-401F-81DD-A46BE2EF9676} = {0A9C865F-0081-4753-B611-F448E04B4C5A}
 	EndGlobalSection
 EndGlobal
