@@ -25,6 +25,7 @@ public sealed class ApiTests : IDisposable
         Assert.Equal($"/customers/{customer.Id}", response.Headers.Location!.ToString());
         var fetched = await _client.GetFromJsonAsync<Customer>(response.Headers.Location);
         Assert.Equal(customer.ContactEmail, fetched!.ContactEmail);
+        Assert.Equal(DateTimeKind.Utc, fetched.CreatedAtUtc.Kind);
         var customers = await _client.GetFromJsonAsync<List<Customer>>("/customers");
         Assert.Single(customers!);
     }
@@ -231,6 +232,8 @@ public sealed class ApiTests : IDisposable
         Assert.Equal(HttpStatusCode.OK, (await client.GetAsync("/swagger/index.html")).StatusCode);
         var schema = await client.GetStringAsync("/swagger/v1/swagger.json");
         Assert.Contains("/contracts/{id}/invoice-preview", schema);
+        Assert.Contains("\"Fixed\"", schema);
+        Assert.Contains("\"Terminated\"", schema);
     }
 
     [Fact]

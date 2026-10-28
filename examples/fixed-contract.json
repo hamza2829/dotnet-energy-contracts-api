@@ -1,0 +1,8 @@
+{
+  "tariffType": "Fixed",
+  "startDate": "2026-10-01",
+  "endDate": "2026-11-01",
+  "status": "Active",
+  "annualVolumeKwh": 10000,
+  "fixedPriceCtPerKwh": 25
+}

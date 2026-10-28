@@ -14,6 +14,8 @@ public sealed class EnergyDbContext(DbContextOptions<EnergyDbContext> options) :
     {
         modelBuilder.Entity<Customer>().Property(c => c.CompanyName).HasMaxLength(200);
         modelBuilder.Entity<Customer>().Property(c => c.ContactEmail).HasMaxLength(254);
+        modelBuilder.Entity<Customer>().Property(c => c.CreatedAtUtc)
+            .HasConversion(value => value, value => DateTime.SpecifyKind(value, DateTimeKind.Utc));
         modelBuilder.Entity<Contract>().HasOne<Customer>().WithMany()
             .HasForeignKey(c => c.CustomerId).OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Contract>().HasIndex(c => new { c.CustomerId, c.StartDate, c.EndDate });
